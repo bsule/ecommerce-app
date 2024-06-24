@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { useLoginMutation } from '../redux/authApis/loginApiSlice';
 import { setCredentials } from "../redux/slices/tokenSlice";
 
@@ -10,6 +11,7 @@ function Login() {
     const dispatch = useDispatch();
 
     const [login, { isLoading, error }] = useLoginMutation();
+    const navigate = useNavigate();
 
 
     const handleSubmit = async (event) => {
@@ -18,6 +20,9 @@ function Login() {
             const user = await login({ username, password }).unwrap();
             console.log('User:', user);
             dispatch(setCredentials({ accessToken: user.access, refreshToken: user.refresh}));
+            setUsername('');
+            setPassword('');
+            navigate('/');
         } 
         catch (err) {
             console.error('Failed to login:', err);

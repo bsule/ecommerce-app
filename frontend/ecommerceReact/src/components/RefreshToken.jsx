@@ -2,24 +2,20 @@ import { useDispatch, useSelector } from "react-redux";
 import { useRefreshTokenMutation } from "../redux/authApis/refreshApiSlice";
 import { getAccessToken, getRefreshToken } from "../utils/tokenManager";
 import { setCredentials } from "../redux/slices/tokenSlice";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 function RefreshToken() {
     const [newAccessToken, { isLoading, error }] = useRefreshTokenMutation();
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
-    const handleSubmit = async (event) => {
-        const req = await newAccessToken(getRefreshToken());
-        dispatch(setCredentials({ accessToken: req.access, accessToken: req.refresh }));
-    };
+    let req;
 
-    return (
-        <div>
-            <input type="submit" onClick={handleSubmit}/>
-            <div>{getRefreshToken()}</div>
+    
+    
 
-            <div>{getAccessToken()}</div>
-        </div>
-    );
+    return true;
 }
 
 export default RefreshToken;

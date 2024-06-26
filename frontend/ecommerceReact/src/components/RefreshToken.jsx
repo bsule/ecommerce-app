@@ -1,21 +1,30 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useRefreshTokenMutation } from "../redux/authApis/refreshApiSlice";
-import { getAccessToken, getRefreshToken } from "../utils/tokenManager";
+import { getRefreshToken } from "../utils/tokenManager";
 import { setCredentials } from "../redux/slices/tokenSlice";
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 
-function RefreshToken() {
-    const [newAccessToken, { isLoading, error }] = useRefreshTokenMutation();
+const useRefreshToken = () => {
     const dispatch = useDispatch();
-    const navigate = useNavigate();
+    const [refreshTokenMutation] = useRefreshTokenMutation();
 
-    let req;
+    const refresh = async () => {
+        const refreshToken = getRefreshToken();
+        if (!refreshToken) {
+            return false;
+        }
 
-    
-    
+        try {
+            const req = await refreshTokenMutation(refreshToken).unwrap();
+            dispatch(setCredentials({ accessToken: req.access, refreshToken: req.refresh }));
+            console.log("Token refreshed successfully");
+            return true;
+        } catch (error) {
+            console.error('Failed to refresh token:', error);
+            return false;
+        }
+    };
 
-    return true;
-}
+    return refresh;
+};
 
-export default RefreshToken;
+export default useRefreshToken;

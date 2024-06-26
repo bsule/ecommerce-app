@@ -17,7 +17,7 @@ function Login() {
     const [login, { isLoading, error }] = useLoginMutation();
     const navigate = useNavigate();
 
-    RefreshToken();
+    LoginCheck();
 
     const handleSubmit = async (event) => {
         event.preventDefault();

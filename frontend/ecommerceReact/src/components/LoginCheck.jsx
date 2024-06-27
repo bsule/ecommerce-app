@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useGetUserQuery } from "../redux/authApis/userApiSlice";
-import { getAccessToken } from "../utils/tokenManager";
 import { logout } from "../redux/slices/tokenSlice";
 import useRefreshToken from "./RefreshToken";
 
@@ -14,27 +13,30 @@ const LoginCheck = () => {
 
     useEffect(() => {
         const check = async () => {
-            const accessToken = getAccessToken();
+            if (isLoading) return;
 
-            if (accessToken) {
-                console.log('logged in');
-                const success = await refreshToken();
-                if (success) {
-                    navigate('/');
-                }
-            } else {
-                console.log("not logged in");
-                const tryRefresh = await refreshToken();
-
-                if (tryRefresh) {
-                    navigate('/');
+            try {
+                if (data && !error) {
+                    const success = await refreshToken();
+                    if (success) {
+                        navigate('/');
+                    }
                 } else {
-                    dispatch(logout());
+                    const tryRefresh = await refreshToken();
+    
+                    if (tryRefresh) {
+                        navigate('/');
+                    } else {
+                        dispatch(logout());
+                    }
                 }
             }
+            catch (e) {}
+            
+            
         };
-        check();
-    }, [navigate, dispatch]);
+            check();
+    }, [navigate, dispatch, isLoading]);
 
     return null;
 };

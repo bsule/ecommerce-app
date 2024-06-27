@@ -21,9 +21,7 @@ function Signup() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    // if (LoginCheck()) {
-    //     navigate('');
-    // }
+    LoginCheck();
 
     const handleSubmit = async (event) => {
         event.preventDefault();

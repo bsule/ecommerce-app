@@ -16,10 +16,8 @@ const useRefreshToken = () => {
         try {
             const req = await refreshTokenMutation(refreshToken).unwrap();
             dispatch(setCredentials({ accessToken: req.access, refreshToken: req.refresh }));
-            console.log("Token refreshed successfully");
             return true;
         } catch (error) {
-            console.error('Failed to refresh token:', error);
             return false;
         }
     };

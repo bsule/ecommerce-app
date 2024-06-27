@@ -15,9 +15,11 @@ export const userApiSlice = createApi({
     }),
     endpoints: (builder) => ({
         getUser: builder.query({
-        query: () => 'user/',
+            query: () => 'user/',
         }),
     }),
+
+    tagTypes: ['User'],
 });
 
 export const { useGetUserQuery } = userApiSlice;

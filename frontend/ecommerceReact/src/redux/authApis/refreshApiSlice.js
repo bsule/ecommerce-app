@@ -18,9 +18,7 @@ export const refreshApiSlice = createApi({
                     setAccessToken(data.access);
                     setRefreshToken(data.refresh);
                 }
-                catch (error) {
-                    console.error('refresh failed');
-                }
+                catch (error) {}
             },
         }),
     }),

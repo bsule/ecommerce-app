@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useGetUserQuery } from "../redux/authApis/userApiSlice";
-import { logout } from "../redux/slices/tokenSlice";
+import { setCredentials, logout } from "../redux/slices/tokenSlice";
 import useRefreshToken from "./RefreshToken";
 
 const LoginCheck = () => {
@@ -19,6 +19,9 @@ const LoginCheck = () => {
                 if (data && !error) {
                     const success = await refreshToken();
                     if (success) {
+                        if (data.access && data.refresh) {
+                            dispatch(setCredentials({ accessToken: data.access, refreshToken: data.refresh}));
+                        }
                         navigate('/');
                     }
                 } else {

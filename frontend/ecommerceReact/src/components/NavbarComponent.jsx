@@ -1,10 +1,10 @@
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { NavLink, useLocation } from 'react-router-dom'; // 
+import { useDispatch, useSelector } from 'react-redux';
 import userImage from '../pics/user.png';
+import Logout from './Logout';
 
 function NavbarComponent() {
-    const location = useLocation();
-
     return (
         <Navbar bg="dark" data-bs-theme="dark">
             <Container>
@@ -18,12 +18,7 @@ function NavbarComponent() {
                     <Nav.Link as={NavLink} to="/login">Login</Nav.Link>
                 </Nav>
                 <Nav>
-                    <Nav.Link as={NavLink} to="/signup">fd</Nav.Link>
-                    {/* {location.pathname === '/signup' && (
-                        <Link to="/contact">
-                            <Nav.Link>Contact</Nav.Link>
-                        </Link>
-                    )} */}
+                    <Logout/>
                 </Nav>
             </Container>
         </Navbar>

@@ -1,26 +1,53 @@
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useLogoutMutation } from "../redux/authApis/logoutApiSlice";
-import { logout as stateLogout } from "../redux/slices/tokenSlice";
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { NavDropdown } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
+import { useLogoutMutation } from '../redux/authApis/logoutApiSlice';
+import { logout as stateLogout } from '../redux/slices/tokenSlice';
 
-
-function Logout(){
-    const [logout, { isLoading, error }] = useLogoutMutation();
+const NavigationMenu = () => {
+    const [logout] = useLogoutMutation();
     const dispatch = useDispatch();
-    
-    // let refreshToken = useSelector((state) => state.token.refreshToken);
+    const accessToken = useSelector((state) => state.token.accessToken);
 
-    const handleClick = async () => {
-        await logout().unwrap();
-        dispatch(stateLogout());
+    const handleLogout = async () => {
+        try {
+            await logout().unwrap();
+            dispatch(stateLogout());
+        } catch (error) {}
     };
+
+    let titleAcc = 'Sign in';
+
+    if (accessToken) {
+        titleAcc = 'Account';
+    }
 
 
     return (
-        <div>
-            <button className="border-2" onClick={handleClick}>Log out</button>
-        </div>
+        <NavDropdown title={titleAcc} id="collapsible-nav-dropdown">
+            {!accessToken ? (
+                <>
+                    <div style={{ padding: '0px 16px 10px 16px', fontWeight: 'bold' }}>Account</div>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item as={NavLink} to="/login">
+                        Login
+                    </NavDropdown.Item>
+                    <NavDropdown.Item as={NavLink} to="/signup">
+                        Signup
+                    </NavDropdown.Item>
+                </>
+            ) : (
+                <>
+                    <div style={{ padding: '0px 16px 10px 16px', fontWeight: 'bold' }}>Account</div>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item onClick={handleLogout}>
+                        Logout
+                    </NavDropdown.Item>
+                </>
+            )}
+        </NavDropdown>
     );
-}
+};
 
-export default Logout;
+export default NavigationMenu;

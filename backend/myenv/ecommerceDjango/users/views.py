@@ -23,7 +23,6 @@ class UserView(APIView):
         return Response({'message': 'Token is valid'}, status=status.HTTP_200_OK)
 
 
-
 class LogoutView(generics.GenericAPIView):
     def post(self, request):
         try:

@@ -4,6 +4,7 @@ import Logout from "./components/Logout";
 import RefreshToken from "./components/RefreshToken";
 import NavbarComponent from "./components/NavbarComponent";
 import LoginPage from "./pages/LoginPage";
+import GetItems from './components/GetItems';
 import SignupPage from './pages/SignupPage';
 
 import Container from 'react-bootstrap/Container';

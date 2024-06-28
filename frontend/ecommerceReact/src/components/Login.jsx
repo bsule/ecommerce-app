@@ -23,15 +23,12 @@ function Login() {
         event.preventDefault();
         try {
             const user = await login({ username, password }).unwrap();
-            console.log('User:', user);
             dispatch(setCredentials({ accessToken: user.access, refreshToken: user.refresh}));
             setUsername('');
             setPassword('');
             navigate('/');
         } 
-        catch (err) {
-            console.error('Failed to login:', err);
-        }
+        catch (err) {}
     };
 
     return (

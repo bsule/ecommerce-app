@@ -40,8 +40,6 @@ const LoginCheck = () => {
         };
             check();
     }, [navigate, dispatch, isLoading]);
-
-    return null;
 };
 
 export default LoginCheck;

@@ -4,6 +4,7 @@ import { NavDropdown } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import { useLogoutMutation } from '../redux/authApis/logoutApiSlice';
 import { logout as stateLogout } from '../redux/slices/tokenSlice';
+import useRefreshToken from './RefreshToken';
 
 const NavigationMenu = () => {
     const [logout] = useLogoutMutation();
@@ -16,6 +17,7 @@ const NavigationMenu = () => {
             dispatch(stateLogout());
         } catch (error) {}
     };
+
 
     let titleAcc = 'Sign in';
 

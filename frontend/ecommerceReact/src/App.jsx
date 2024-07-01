@@ -1,24 +1,24 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import LoginCheck from "./components/LoginCheck";
-import Logout from "./components/Logout";
-import RefreshToken from "./components/RefreshToken";
 import NavbarComponent from "./components/NavbarComponent";
 import LoginPage from "./pages/LoginPage";
-import GetItems from './components/GetItems';
+import Home from './pages/Home';
 import SignupPage from './pages/SignupPage';
 
 import Container from 'react-bootstrap/Container';
+import LoginCheck from './components/LoginCheck';
 
 function App() {
     return (
         <Router>
             <div>
                 <NavbarComponent/>
+                <LoginCheck/>
                 <Container>
                     <Routes>
-                        <Route path='/' element={<SignupPage/>}/>
+                        <Route path='/' element={<Home/>}/>
                         <Route path='/signup' element={<SignupPage/>}/>
                         <Route path='/login' element={<LoginPage/>}/>
+                        {/* <Route path='/items/:id' element={<ItemDetailPage/>}/> */}
                     </Routes>
                 </Container>
             </div>

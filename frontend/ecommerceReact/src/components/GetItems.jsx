@@ -24,7 +24,7 @@ function GetItems() {
                         <img src={item.image} alt="Failed to load image" className="w-[200px] h-[200px]" />
                     </div>
                     <h4 className="font-bold">{item.name}</h4>
-                    <p>{item.price}</p>
+                    <p className="text-green-500">{item.price}</p>
                     <Button variant="primary">Add to Cart</Button>
                 </div>
             </Link>

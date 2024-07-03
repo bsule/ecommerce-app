@@ -16,7 +16,7 @@ function GetItems() {
     // const filteredItems = data.filter(item => item.category === 1);
 
     const pictureMap = data.map(item => (
-        <div key={item.id} className="flex mt-10">
+        <div key={item.id} className="flex mt-10 mr-5">
             <Link to={`/items/${item.id}`} className="relative bg-cover bg-center rounded-lg overflow-hidden w-[250px] h-[280px]">
                 <div className="absolute inset-0 z-0"></div>
                 <div className="relative z-10 flex flex-col text-black w-full text-pretty">
@@ -33,7 +33,7 @@ function GetItems() {
 
 
     return (
-        <div>
+        <div className="flex flex-row">
             {pictureMap}
         </div>
     );

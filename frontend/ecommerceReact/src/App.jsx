@@ -6,6 +6,7 @@ import SignupPage from './pages/SignupPage';
 
 import Container from 'react-bootstrap/Container';
 import LoginCheck from './components/LoginCheck';
+import StarRating from './components/StarRating';
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
             <div>
                 <NavbarComponent/>
                 <LoginCheck/>
+                <StarRating/>
                 <Container>
                     <Routes>
                         <Route path='/' element={<Home/>}/>

@@ -6,7 +6,7 @@ class ItemsSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = items
-        fields = ['id', 'name', 'description', 'category', 'category_name', 'price', 'amount_in_stock', 'image']
+        fields = ['id', 'name', 'description', 'category', 'review_avg', 'total_reviews', 'category_name', 'price', 'amount_in_stock', 'image']
     
     def get_category_name(self, obj):
         if obj.category:

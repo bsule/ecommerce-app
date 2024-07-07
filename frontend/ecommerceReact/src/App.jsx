@@ -14,7 +14,6 @@ function App() {
             <div>
                 <NavbarComponent/>
                 <LoginCheck/>
-                <StarRating/>
                 <Container>
                     <Routes>
                         <Route path='/' element={<Home/>}/>

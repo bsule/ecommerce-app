@@ -1,6 +1,6 @@
 import Star from './Star';
 
-const StarRating = ({ rating }) => {
+const StarRating = ({ rating, total_reviews }) => {
 
     const calculatePercentage = (index) => {
         const fullStars = Math.floor(rating);
@@ -12,16 +12,16 @@ const StarRating = ({ rating }) => {
     return (
         <div>
             {[...Array(5)].map((star, index) => (
-                <span key={index} style={{ position: 'relative', display: 'inline-block' }}>
-                <Star filled={index < rating} percentage={calculatePercentage(index)}/>
-                <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', display: 'flex' }}>
-                    {[...Array(10)].map((_, fractionIndex) => (
-                    <div key={fractionIndex} style={{ flex: 1, height: '100%' }}/>
-                    ))}
-                </div>
+                <span key={index} className='relative inline-block'>
+                    <Star filled={index < rating} percentage={calculatePercentage(index)}/>
+                    <div className='absolute top-0 left-0 w-full flex'>
+                        {[...Array(10)].map((_, fractionIndex) => (
+                            <div key={fractionIndex} className='flex-1 h-full'/>
+                        ))}
+                    </div>
                 </span>
             ))}
-            {/* <p>{rating.toFixed(1)} of {5} stars</p> */}
+            <span className='ml-2 text-sm text-gray-500	'>{ total_reviews }</span>
         </div>
     );
 };

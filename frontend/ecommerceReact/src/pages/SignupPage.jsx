@@ -1,8 +1,14 @@
+import LoadingBarComponent from "../components/LoadingBar";
 import Signup from "../components/Signup";
 
 function SignupPage() {
+    const isLoading = false;
+
     return (
-        <Signup/>
+        <div>
+            <LoadingBarComponent isLoading={isLoading}/>
+            <Signup/>
+        </div>
     );
 }
 

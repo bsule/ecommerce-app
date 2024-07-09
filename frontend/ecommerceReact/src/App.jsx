@@ -6,7 +6,7 @@ import SignupPage from './pages/SignupPage';
 
 import Container from 'react-bootstrap/Container';
 import LoginCheck from './components/LoginCheck';
-import StarRating from './components/StarRating';
+import ItemDetailPage from './components/ItemsDetailPage';
 
 function App() {
     return (
@@ -19,7 +19,7 @@ function App() {
                         <Route path='/' element={<Home/>}/>
                         <Route path='/signup' element={<SignupPage/>}/>
                         <Route path='/login' element={<LoginPage/>}/>
-                        {/* <Route path='/items/:id' element={<ItemDetailPage/>}/> */}
+                        <Route path='/items/:id' element={<ItemDetailPage/>}/>
                     </Routes>
                 </Container>
             </div>

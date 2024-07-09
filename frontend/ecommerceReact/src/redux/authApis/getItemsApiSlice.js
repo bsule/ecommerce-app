@@ -9,7 +9,10 @@ export const itemsApiSlice = createApi({
         getItems: builder.query({
             query: () => '',
         }),
+        getItemById: builder.query({
+            query: (id) => `${id}`,
+        }),
     }),
 });
 
-export const { useGetItemsQuery } = itemsApiSlice;
+export const { useGetItemsQuery, useGetItemByIdQuery } = itemsApiSlice;

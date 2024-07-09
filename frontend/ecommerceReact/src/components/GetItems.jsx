@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from 'react-bootstrap';
 import StarRating from "./StarRating";
 import { useGetItemsQuery } from "../redux/authApis/getItemsApiSlice";
+import LoadingBarComponent from "./LoadingBar";
 
 function GetItems() {
     const {data, isLoading, error} = useGetItemsQuery();
@@ -9,7 +10,7 @@ function GetItems() {
     if (isLoading) {
         return (
             <div>
-                Loading...
+                <LoadingBarComponent isLoading={isLoading}/>
             </div>
         );
     }
@@ -35,8 +36,11 @@ function GetItems() {
 
 
     return (
-        <div className="flex flex-row flex-wrap justify-content-center">
-            {pictureMap}
+        <div>
+            <LoadingBarComponent isLoading={isLoading}/>
+            <div className="flex flex-row flex-wrap justify-content-center">
+                {pictureMap}
+            </div>
         </div>
     );
 }

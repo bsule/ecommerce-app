@@ -12,6 +12,7 @@ class CartItemSerializer(serializers.ModelSerializer):
         fields = ['id', 'item', 'item_name', 'item_price', 'quantity', 'total_price']
         read_only_fields = ['total_price']
 
+
 class CartSerializer(serializers.ModelSerializer):
     items = CartItemSerializer(many=True, read_only=True)
     total_price = serializers.ReadOnlyField()

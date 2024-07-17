@@ -4,6 +4,7 @@ from rest_framework.permissions import IsAuthenticated
 from .models import Cart, CartItem, items
 from .serializers import CartSerializer, CartItemSerializer
 
+
 class CartDetailView(generics.RetrieveAPIView):
     serializer_class = CartSerializer
     permission_classes = [IsAuthenticated]
@@ -11,6 +12,7 @@ class CartDetailView(generics.RetrieveAPIView):
     def get_object(self):
         cart, created = Cart.objects.get_or_create(user=self.request.user)
         return cart
+
 
 class AddToCartView(generics.CreateAPIView):
     serializer_class = CartItemSerializer
@@ -26,6 +28,7 @@ class AddToCartView(generics.CreateAPIView):
             cart_item.quantity += int(quantity)
         cart_item.save()
         return Response(CartItemSerializer(cart_item).data, status=status.HTTP_201_CREATED)
+
 
 class RemoveFromCartView(generics.DestroyAPIView):
     serializer_class = CartItemSerializer

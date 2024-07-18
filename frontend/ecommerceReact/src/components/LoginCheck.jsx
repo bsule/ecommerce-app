@@ -23,6 +23,8 @@ const LoginCheck = () => {
                         if (data.access && data.refresh) {
                             dispatch(setCredentials({ accessToken: data.access, refreshToken: data.refresh}));
                         }
+                        console.log(getAccessToken());
+                        console.log(getRefreshToken());
                         navigate('/');
                     }
                 } else {
@@ -40,8 +42,6 @@ const LoginCheck = () => {
             
         };
             check();
-            console.log(getAccessToken());
-            console.log(getRefreshToken());
     }, [navigate, dispatch, isLoading]);
 };
 

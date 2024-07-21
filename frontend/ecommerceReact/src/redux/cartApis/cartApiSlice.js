@@ -18,10 +18,13 @@ export const cartApiSlice = createApi({
     baseQuery,
     endpoints: (builder) => ({
         addToCart: builder.mutation({
-            query: (item) => ({
+            query: (item, quantity) => ({
                 url: 'cart/add/',
                 method: 'POST',
-                body: item,
+                body: {
+                    item,
+                    quantity
+                },
             }),
         }),
         viewCart: builder.query({
@@ -31,7 +34,7 @@ export const cartApiSlice = createApi({
             query: (item) => ({
                 url: `cart/remove/`,
                 method: 'DELETE',
-                body: item,
+                body: { item },
             }),
         }),
     }),

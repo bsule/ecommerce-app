@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import LoadingBar from 'react-top-loading-bar';
 
 const LoadingBarComponent = ({ isLoading }) => {
-  const [progress, setProgress] = useState(0);
+    const [progress, setProgress] = useState(0);
 
     useEffect(() => {
         let interval;

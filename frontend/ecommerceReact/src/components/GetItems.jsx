@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import { Button } from 'react-bootstrap';
 import AddCart from "./AddCart";
 import StarRating from "./StarRating";
 import { useGetItemsQuery } from "../redux/authApis/getItemsApiSlice";
+import { useViewCartQuery } from "../redux/cartApis/cartApiSlice";
 import LoadingBarComponent from "./LoadingBar";
 
 function GetItems() {

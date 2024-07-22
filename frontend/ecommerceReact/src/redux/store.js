@@ -5,6 +5,7 @@ import { logoutApiSlice } from './authApis/logoutApiSlice';
 import { signupApiSlice } from './authApis/signupApiSlice';
 import { refreshApiSlice } from './authApis/refreshApiSlice';
 import { itemsApiSlice } from './authApis/getItemsApiSlice';
+import { cartApiSlice } from './cartApis/cartApiSlice';
 import tokenReducer from './slices/tokenSlice';
 
 export const store = configureStore({
@@ -16,6 +17,7 @@ export const store = configureStore({
         [signupApiSlice.reducerPath]: signupApiSlice.reducer,
         [refreshApiSlice.reducerPath]: refreshApiSlice.reducer,
         [itemsApiSlice.reducerPath]: itemsApiSlice.reducer,
+        [cartApiSlice.reducerPath]: cartApiSlice.reducer,
     },
     middleware: (getDefaultMiddleware) => 
         getDefaultMiddleware().concat(
@@ -24,6 +26,7 @@ export const store = configureStore({
             logoutApiSlice.middleware,
             signupApiSlice.middleware,
             refreshApiSlice.middleware,
-            itemsApiSlice.middleware
+            itemsApiSlice.middleware,
+            cartApiSlice.middleware,
         ),
 });

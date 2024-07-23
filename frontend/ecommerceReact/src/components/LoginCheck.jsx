@@ -25,21 +25,16 @@ const LoginCheck = () => {
                         }
                         console.log(getAccessToken());
                         console.log(getRefreshToken());
-                        navigate('/');
                     }
                 } else {
                     const tryRefresh = await refreshToken();
     
-                    if (tryRefresh) {
-                        navigate('/');
-                    } else {
+                    if (!tryRefresh) {
                         dispatch(logout());
                     }
                 }
             }
             catch (e) {}
-            
-            
         };
             check();
     }, [navigate, dispatch, isLoading]);

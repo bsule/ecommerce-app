@@ -21,8 +21,6 @@ const LoginCheck = () => {
                     const success = await refreshToken();
 
                     if (success) {
-                        console.log(getAccessToken());
-                        console.log(getRefreshToken());
                     }
                 } else {
                     const tryRefresh = await refreshToken();
@@ -34,8 +32,8 @@ const LoginCheck = () => {
             }
             catch (e) {}
         };
-            check();
-    }, [navigate, dispatch, isLoading]);
+        check();
+    }, [dispatch, isLoading]);
 };
 
 export default LoginCheck;

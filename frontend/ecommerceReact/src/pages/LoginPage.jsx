@@ -1,15 +1,16 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import LoadingBarComponent from "../components/LoadingBar";
-import { getAccessToken } from "../utils/tokenManager";
 import Login from "../components/Login";
+import { useSelector } from "react-redux";
 
 function LoginPage() {
     const isLoading = false;
     const navigate = useNavigate();
+    const accessToken = useSelector((state) => state.token.accessToken);
 
     useEffect(() => {
-        if (getAccessToken()) {
+        if (accessToken) {
             navigate('/');
         }
     });

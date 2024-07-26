@@ -16,6 +16,7 @@ const useRefreshToken = () => {
         try {
             const req = await refreshTokenMutation(refreshToken).unwrap();
             console.log(req);
+            console.log(req.access);
             dispatch(setCredentials({ accessToken: req.access, refreshToken: req.refresh }));
             return true;
         } 

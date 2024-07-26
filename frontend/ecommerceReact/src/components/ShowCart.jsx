@@ -2,9 +2,7 @@ import { useViewCartQuery } from "../redux/cartApis/cartApiSlice";
 import LoginCheck from "./LoginCheck";
 
 function ShowCart() {
-    LoginCheck();
     const {data: items, isLoading, error} = useViewCartQuery();
-
 
 
     return (

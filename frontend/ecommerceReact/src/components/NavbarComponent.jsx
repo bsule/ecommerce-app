@@ -13,9 +13,7 @@ function NavbarComponent() {
                 <Nav className="m-auto">
                     <Nav.Link as={NavLink} to="/">Home</Nav.Link>
 
-                    <Nav.Link as={NavLink} to="/signup">Signup</Nav.Link>
-
-                    <Nav.Link as={NavLink} to="/login">Login</Nav.Link>
+                    <Nav.Link as={NavLink} to="/cart">Cart</Nav.Link>
                 </Nav>
                 <Nav>
                     <Logout/>

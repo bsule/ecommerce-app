@@ -2,9 +2,8 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useGetUserQuery } from "../redux/authApis/userApiSlice";
-import { setCredentials, logout } from "../redux/slices/tokenSlice";
+import { logout } from "../redux/slices/tokenSlice";
 import useRefreshToken from "./RefreshToken";
-import { getAccessToken, getRefreshToken } from "../utils/tokenManager";
 
 const LoginCheck = () => {
     const { data, error, isLoading } = useGetUserQuery();

@@ -9,14 +9,13 @@ function CartPage() {
     const isLoading = false;
     const navigate = useNavigate();
     const accessToken = getAccessToken();
-    const stateAccess = useSelector((state) => state.token.accessToken);
 
     useEffect(() => {
         console.log(accessToken);
         if (!accessToken) {
             navigate('/login');
         }
-    }, [stateAccess]);
+    });
 
     return (
         <div>

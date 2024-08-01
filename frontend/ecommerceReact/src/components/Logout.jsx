@@ -15,6 +15,7 @@ const NavigationMenu = () => {
         try {
             await logout().unwrap();
             dispatch(stateLogout());
+            window.location.reload();
         } catch (error) {}
     };
 

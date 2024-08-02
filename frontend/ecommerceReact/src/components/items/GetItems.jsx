@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
-import AddCart from "./AddCart";
+import AddCart from "../cart/AddCart";
 import StarRating from "./StarRating";
-import { useGetItemsQuery } from "../redux/authApis/getItemsApiSlice";
-import { useViewCartQuery } from "../redux/cartApis/cartApiSlice";
-import LoadingBarComponent from "./LoadingBar";
+import { useGetItemsQuery } from "../../redux/authApis/getItemsApiSlice";
+import LoadingBarComponent from "../LoadingBar";
 
 function GetItems() {
     const {data, isLoading, error} = useGetItemsQuery();

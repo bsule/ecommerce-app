@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
-import { useRefreshTokenMutation } from "../redux/authApis/refreshApiSlice";
-import { getRefreshToken } from "../utils/tokenManager";
-import { setCredentials } from "../redux/slices/tokenSlice";
+import { useRefreshTokenMutation } from "../../redux/authApis/refreshApiSlice";
+import { getRefreshToken } from "../../utils/tokenManager";
+import { setCredentials } from "../../redux/slices/tokenSlice";
 
 const useRefreshToken = () => {
     const dispatch = useDispatch();

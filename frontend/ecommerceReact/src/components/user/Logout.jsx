@@ -2,9 +2,8 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { NavDropdown } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
-import { useLogoutMutation } from '../redux/authApis/logoutApiSlice';
-import { logout as stateLogout } from '../redux/slices/tokenSlice';
-import useRefreshToken from './RefreshToken';
+import { useLogoutMutation } from '../../redux/authApis/logoutApiSlice';
+import { logout as stateLogout } from '../../redux/slices/tokenSlice';
 
 const NavigationMenu = () => {
     const [logout] = useLogoutMutation();

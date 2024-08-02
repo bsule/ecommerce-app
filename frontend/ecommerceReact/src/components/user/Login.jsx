@@ -3,8 +3,8 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Form from 'react-bootstrap/Form';
-import { useLoginMutation } from '../redux/authApis/loginApiSlice';
-import { setCredentials } from "../redux/slices/tokenSlice";
+import { useLoginMutation } from '../../redux/authApis/loginApiSlice';
+import { setCredentials } from "../../redux/slices/tokenSlice";
 import LoginCheck from "./LoginCheck";
 
 function Login() {

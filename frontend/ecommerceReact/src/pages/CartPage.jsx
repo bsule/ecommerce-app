@@ -1,9 +1,9 @@
 import LoadingBarComponent from "../components/LoadingBar";
 import { useNavigate } from "react-router-dom";
-import ShowCart from "../components/ShowCart";
+import ShowCart from "../components/cart/ShowCart";
 import { useEffect } from "react";
-import { useSelector } from "react-redux";
 import { getAccessToken } from "../utils/tokenManager";
+import BuyNow from "../components/cart/BuyNow";
 
 function CartPage() {
     const isLoading = false;
@@ -21,6 +21,7 @@ function CartPage() {
         <div>
             <LoadingBarComponent isLoading={isLoading}/>
             <ShowCart/>
+            <BuyNow/>
         </div>
     );
 }

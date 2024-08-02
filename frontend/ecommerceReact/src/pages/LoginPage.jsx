@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import LoadingBarComponent from "../components/LoadingBar";
-import Login from "../components/Login";
+import Login from "../components/user/Login";
 import { useSelector } from "react-redux";
 
 function LoginPage() {

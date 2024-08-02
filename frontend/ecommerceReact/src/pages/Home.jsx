@@ -1,4 +1,4 @@
-import GetItems from "../components/GetItems";
+import GetItems from "../components/items/GetItems";
 
 function Home() {
     return (

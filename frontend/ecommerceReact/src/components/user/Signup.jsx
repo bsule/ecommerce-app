@@ -3,11 +3,9 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import { useSignupMutation } from "../redux/authApis/signupApiSlice";
-import { setCredentials } from "../redux/slices/tokenSlice";
-import { getAccessToken } from "../utils/tokenManager";
+import { useSignupMutation } from "../../redux/authApis/signupApiSlice";
+import { setCredentials } from "../../redux/slices/tokenSlice";
 import LoginCheck from "./LoginCheck";
-import RefreshToken from "./RefreshToken";
 
 function Signup() {
     const [firstName, setFirstName] = useState('');

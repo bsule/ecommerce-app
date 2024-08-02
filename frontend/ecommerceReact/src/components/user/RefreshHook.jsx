@@ -1,6 +1,5 @@
-// components/LoginCheck.js
 import { useEffect } from 'react';
-import useRefreshToken from '../hooks/useRefreshToken';
+import useRefreshToken from './RefreshToken';
 
 const useLoginCheck = () => {
     const refresh = useRefreshToken();

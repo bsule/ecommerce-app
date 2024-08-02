@@ -1,8 +1,6 @@
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import { NavLink, useLocation } from 'react-router-dom'; // 
-import { useDispatch, useSelector } from 'react-redux';
-import userImage from '../pics/user.png';
-import Logout from './Logout';
+import Logout from './user/Logout';
+import { Container, Nav, Navbar } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 
 function NavbarComponent() {
     return (

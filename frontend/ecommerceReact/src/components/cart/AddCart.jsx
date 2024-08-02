@@ -1,6 +1,6 @@
 import { Button } from "react-bootstrap";
-import { useAddToCartMutation } from "../redux/cartApis/cartApiSlice";
-import { getAccessToken } from "../utils/tokenManager";
+import { useAddToCartMutation } from "../../redux/cartApis/cartApiSlice";
+import { getAccessToken } from "../../utils/tokenManager";
 import { useNavigate } from "react-router-dom";
 
 function AddCart({ itemID }) {
@@ -29,7 +29,6 @@ function AddCart({ itemID }) {
     return (
         <div>
             <Button variant="primary" onClick={handleAddToCart} disabled={isLoading}>Add to Cart</Button>
-            <p>{itemID}</p>
         </div>
     );
 }

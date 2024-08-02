@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
-import { useGetItemByIdQuery } from "../redux/authApis/getItemsApiSlice";
-import { useEffect, useRef } from "react";
-import LoadingBarComponent from "./LoadingBar";
+import { useGetItemByIdQuery } from "../../redux/authApis/getItemsApiSlice";
+import LoadingBarComponent from "../LoadingBar";
 
 function ItemDetailPage() {
     const { id } = useParams();

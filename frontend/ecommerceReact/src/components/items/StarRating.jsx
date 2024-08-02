@@ -1,4 +1,4 @@
-import Star from './Star';
+import Star from "./Star";
 
 const StarRating = ({ rating, total_reviews }) => {
 

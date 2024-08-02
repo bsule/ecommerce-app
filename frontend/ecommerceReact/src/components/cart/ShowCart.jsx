@@ -1,8 +1,5 @@
-import { useViewCartQuery } from "../redux/cartApis/cartApiSlice";
-import { getAccessToken } from "../utils/tokenManager";
-import LoadingBarComponent from "./LoadingBar";
-import { useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useViewCartQuery } from "../../redux/cartApis/cartApiSlice";
+import LoadingBarComponent from "../LoadingBar";
 
 function ShowCart() {
     const {data, isLoading, error, refetch} = useViewCartQuery();

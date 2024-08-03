@@ -16,12 +16,17 @@ function ShowCart() {
     if (!data) {
         return null;
     }
+    console.log(data);
     // data.items with array of items in cart
 
     const itemMap = data?.items?.map(item => (
-        <div key={item.id}>
+        <div key={item.id} className="flex">
+            <img src={item.item_image} className="w-20 h-20" />
             <p>{item.item_name}</p>
             <p>{item.item_price}</p>
+            <div className="flex flex-column ml-5">
+                <p>{item.quantity}</p>
+            </div>
         </div>
     ));
     

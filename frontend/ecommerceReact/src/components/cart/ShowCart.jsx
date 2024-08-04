@@ -21,7 +21,7 @@ function ShowCart() {
 
     const itemMap = data?.items?.map(item => (
         <div key={item.id} className="flex">
-            <img src={item.item_image} className="w-20 h-20" />
+            <img src={item.item_image} className="w-28 h-28" />
             <p>{item.item_name}</p>
             <p>{item.item_price}</p>
             <div className="flex flex-column ml-5">

@@ -1,9 +1,15 @@
+import { useEffect } from "react";
 import { useViewCartQuery } from "../../redux/cartApis/cartApiSlice";
 import LoadingBarComponent from "../LoadingBar";
+import RemoveCart from "./RemoveCart";
 
 function ShowCart() {
     const {data, isLoading, error, refetch} = useViewCartQuery();
     
+    useEffect(() => {
+        refetch();
+    }, []);
+
     if (isLoading) {
         return (
             <div>
@@ -16,8 +22,6 @@ function ShowCart() {
     if (!data) {
         return null;
     }
-    console.log(data);
-    // data.items with array of items in cart
 
     const itemMap = data?.items?.map(item => (
         <div key={item.id} className="flex">
@@ -27,6 +31,7 @@ function ShowCart() {
             <div className="flex flex-column ml-5">
                 <p>{item.quantity}</p>
             </div>
+            <RemoveCart item={item} refetchCart={refetch}/>
         </div>
     ));
     

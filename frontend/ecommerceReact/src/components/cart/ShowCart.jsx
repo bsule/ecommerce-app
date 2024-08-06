@@ -26,12 +26,14 @@ function ShowCart() {
     const itemMap = data?.items?.map(item => (
         <div key={item.id} className="flex">
             <img src={item.item_image} className="w-28 h-28" />
-            <p>{item.item_name}</p>
-            <p>{item.item_price}</p>
-            <div className="flex flex-column ml-5">
-                <p>{item.quantity}</p>
+            <div className="ml-4 flex flex-col">
+                <p>{item.item_name}</p>
+                <p>{item.item_price}</p>
             </div>
-            <RemoveCart item={item} refetchCart={refetch}/>
+            <div className="flex flex-column ml-auto items-end">
+                <p>{item.quantity}</p>
+                <RemoveCart item={item} refetchCart={refetch}/>
+            </div>
         </div>
     ));
     

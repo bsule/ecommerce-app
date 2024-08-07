@@ -1,7 +1,6 @@
 import Star from "./Star";
 
 const StarRating = ({ rating, total_reviews }) => {
-
     const calculatePercentage = (index) => {
         const fullStars = Math.floor(rating);
         const isCurrentStar = index === fullStars;

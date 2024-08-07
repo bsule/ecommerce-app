@@ -25,7 +25,6 @@ function AddCart({ itemID }) {
         }
     };
 
-
     return (
         <div>
             <Button variant="primary" onClick={handleAddToCart} disabled={isLoading}>Add to Cart</Button>

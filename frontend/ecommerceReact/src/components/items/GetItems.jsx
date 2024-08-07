@@ -28,7 +28,6 @@ function GetItems() {
                     <h4 className="font-bold">{item.name}</h4>
                     <p className="text-green-500">{item.price}</p>
                     <StarRating rating={item.review_avg} total_reviews={item.total_reviews}/>
-                    {/* <Button variant="primary">Add to Cart</Button> */}
                     <AddCart itemID={item.id}/>
                 </div>
             </Link>

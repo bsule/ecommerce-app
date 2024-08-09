@@ -18,10 +18,12 @@ function CartPage() {
     });
 
     return (
-        <div>
+        <div className="flex flex-column">
             <LoadingBarComponent isLoading={isLoading}/>
-            <ShowCart/>
-            <BuyNow/>
+            <div className="mt-5">
+                <ShowCart/>
+                <BuyNow/>
+            </div>
         </div>
     );
 }

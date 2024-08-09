@@ -9,7 +9,7 @@ function BuyNow() {
     };
 
     return (
-        <div>
+        <div className="flex justify-center mt-2 mb-5">
             <Button variant="success" onClick={handleBuyNow}>Buy Now</Button>
         </div>
     );

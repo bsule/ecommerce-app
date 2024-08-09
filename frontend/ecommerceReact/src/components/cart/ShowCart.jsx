@@ -43,7 +43,7 @@ function ShowCart() {
             <LoadingBarComponent isLoading={isLoading}/>
             {itemMap}
             <br />
-            {data.total_price}
+            <h3 className="flex justify-content-center text-lg font-semibold">${data.total_price}</h3>
         </div>
     );
 }

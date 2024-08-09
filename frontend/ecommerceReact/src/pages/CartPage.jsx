@@ -22,7 +22,7 @@ function CartPage() {
             <LoadingBarComponent isLoading={isLoading}/>
             <div className="mt-5">
                 <ShowCart/>
-                <BuyNow/>
+                <BuyNow />
             </div>
         </div>
     );

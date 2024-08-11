@@ -30,20 +30,21 @@ function Login() {
     };
 
     return (
-        <Form onSubmit={handleSubmit}>
-            <Form.Group className="mb-3">
-                <Form.Label>Username</Form.Label>
-                <Form.Control type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)}/>
-            </Form.Group>
+        <div className="flex flex-col items-center justify-center mt-20">
+            <h2 className="mb-8 text-2xl">Login</h2>
+            <Form onSubmit={handleSubmit} className="flex flex-col min-w-80">
+                <Form.Group className="mb-3">
+                    <Form.Control type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)}/>
+                </Form.Group>
 
-            <Form.Group className="mb-3">
-                <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-            </Form.Group>
-            <Button variant="primary" type="submit" disabled={isLoading}>
-                Login
-            </Button>
-        </Form>
+                <Form.Group className="mb-3">
+                    <Form.Control type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                </Form.Group>
+                <Button variant="primary" type="submit" disabled={isLoading}>
+                    Login
+                </Button>
+            </Form>
+        </div>
     );
 }
 

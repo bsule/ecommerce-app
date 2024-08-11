@@ -31,7 +31,7 @@ const LoadingBarComponent = ({ isLoading }) => {
     return (
         <div>
         <LoadingBar
-            color='#007bff'
+            color='#ffffff'
             progress={progress}
             onLoaderFinished={() => setProgress(0)}
             waitingTime='500'

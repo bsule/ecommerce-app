@@ -2,7 +2,9 @@ import GetItems from "../components/items/GetItems";
 
 function Home() {
     return (
-        <GetItems/>
+        <div className="mb-20">
+            <GetItems />
+        </div>
     );
 }
 

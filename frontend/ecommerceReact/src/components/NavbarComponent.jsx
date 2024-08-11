@@ -4,9 +4,9 @@ import { NavLink } from 'react-router-dom';
 
 function NavbarComponent() {
     return (
-        <Navbar bg="dark" data-bs-theme="dark">
+        <Navbar bg="primary" data-bs-theme="dark">
             <Container>
-                <Navbar.Brand as={NavLink} to="/">Navbar</Navbar.Brand>
+                <Navbar.Brand as={NavLink} to="/">Shop</Navbar.Brand>
 
                 <Nav className="m-auto">
                     <Nav.Link as={NavLink} to="/">Home</Nav.Link>

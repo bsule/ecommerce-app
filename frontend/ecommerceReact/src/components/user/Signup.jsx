@@ -36,36 +36,31 @@ function Signup() {
     };
 
     return (
-        <div>
-            <Form onSubmit={handleSubmit}>
+        <div className="flex flex-col items-center justify-center mt-20">
+            <h2 className="text-2xl mb-8">Signup</h2>
+            <Form onSubmit={handleSubmit} className="flex flex-col min-w-96">
                 <Form.Group className="mb-3">
-                    <Form.Label>First Name</Form.Label>
                     <Form.Control type="text" placeholder="First Name" value={firstName} onChange={(e) => setFirstName(e.target.value)}/>
                 </Form.Group>
 
                 <Form.Group className="mb-3">
-                    <Form.Label>Last Name</Form.Label>
                     <Form.Control type="text" placeholder="Last Name" value={lastName} onChange={(e) => setLastName(e.target.value)}/>
                 </Form.Group>
 
                 <Form.Group className="mb-3">
-                    <Form.Label>Username</Form.Label>
                     <Form.Control type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)}/>
                 </Form.Group>
 
                 <Form.Group className="mb-3">
-                    <Form.Label>Email</Form.Label>
                     <Form.Control type="Email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}/>
                 </Form.Group>
 
                 <Form.Group className="mb-3">
-                    <Form.Label>Password</Form.Label>
                     <Form.Control type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
                 </Form.Group>
 
                 <Form.Group className="mb-3">
-                    <Form.Label>Password again</Form.Label>
-                    <Form.Control type="password" placeholder="Password" value={password2} onChange={(e) => setPassword2(e.target.value)} />
+                    <Form.Control type="password" placeholder="Confirm Password" value={password2} onChange={(e) => setPassword2(e.target.value)} />
                 </Form.Group>
 
                 <Button variant="primary" type="submit" disabled={isLoading}>

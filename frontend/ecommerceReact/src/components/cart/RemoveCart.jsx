@@ -16,7 +16,7 @@ function RemoveCart({ item, refetchCart }) {
 
     return (
         <div>
-            <Button onClick={handleRemove} disabled={isLoading}>Remove</Button>
+            <Button variant="danger" onClick={handleRemove} disabled={isLoading}>Remove</Button>
         </div>
     );
 }

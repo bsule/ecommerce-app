@@ -11,7 +11,6 @@ function CartPage() {
     const accessToken = getAccessToken();
 
     useEffect(() => {
-        console.log(accessToken);
         if (!accessToken) {
             navigate('/login');
         }

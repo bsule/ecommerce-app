@@ -8,6 +8,7 @@ import SignupPage from './pages/SignupPage';
 import LoginCheck from './components/user/LoginCheck';
 import ItemDetailPage from './components/items/ItemsDetailPage';
 import BuyNowPage from './pages/BuyNowPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
     return (
@@ -23,6 +24,7 @@ function App() {
                         <Route path='/items/:id' element={<ItemDetailPage/>}/>
                         <Route path='/cart' element={<CartPage/>}/>
                         <Route path='/buy-now' element={<BuyNowPage/>}/>
+                        <Route path='*' element={<NotFoundPage/>}/>
                     </Routes>
                 </Container>
             </div>

@@ -31,14 +31,14 @@ function Login() {
 
     return (
         <div className="flex flex-col items-center justify-center mt-20">
-            <h2 className="mb-8 text-2xl">Login</h2>
-            <Form onSubmit={handleSubmit} className="flex flex-col min-w-80">
+            <h2 className="mb-8 text-2xl font-bold">Login</h2>
+            <Form onSubmit={handleSubmit} className="flex flex-col min-w-96">
                 <Form.Group className="mb-3">
-                    <Form.Control type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)}/>
+                    <Form.Control type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} className="border-gray-400"/>
                 </Form.Group>
 
                 <Form.Group className="mb-3">
-                    <Form.Control type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                    <Form.Control type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} className="border-gray-400"/>
                 </Form.Group>
                 <Button variant="primary" type="submit" disabled={isLoading}>
                     Login

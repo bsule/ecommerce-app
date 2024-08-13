@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useViewCartQuery } from "../../redux/cartApis/cartApiSlice";
 import LoadingBarComponent from "../LoadingBar";
 import RemoveCart from "./RemoveCart";
+import { Link } from "react-router-dom";
 
 function ShowCart() {
     const {data, isLoading, error, refetch} = useViewCartQuery();
@@ -25,11 +26,13 @@ function ShowCart() {
 
     const itemMap = data?.items?.map(item => (
         <div key={item.id} className="flex mb-4 w-[700px]">
-            <img src={item.item_image} className="w-28 h-28" />
-            <div className="ml-4 flex flex-col">
-                <p>{item.item_name}</p>
-                <p>{item.item_price}</p>
-            </div>
+            <Link to={`/items/${item.item}`} className="flex items-center">
+                <img src={item.item_image} className="w-28 h-28" />
+                <div className="ml-4 flex flex-col">
+                    <p>{item.item_name}</p>
+                    <p>{item.item_price}</p>
+                </div>
+            </Link>
             <div className="flex flex-column ml-auto items-end">
                 <p className="mb-2">Quantity: {item.quantity}</p>
                 <RemoveCart item={item} refetchCart={refetch}/>

@@ -4,7 +4,6 @@ import { Button } from "react-bootstrap";
 
 function RemoveCart({ item, refetchCart }) {
     const [removeFromCart, {data, isLoading, error}] = useRemoveFromCartMutation();
-    console.log(item);
 
     const handleRemove = async () => {
         try {

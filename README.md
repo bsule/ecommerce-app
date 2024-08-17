@@ -1,4 +1,13 @@
-# Full-Stack Ecommerce App with Django and React
+# Ecommerce App with Django Rest Framework and React
+
+## Description
+![<Django>](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=Django&logoColor=white)
+![<React>](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white)
+![<Redux>](https://img.shields.io/badge/redux-764ABC?style=for-the-badge&logo=redux&logoColor=white)
+![<TailwindCSS>](https://img.shields.io/badge/tailwindcss-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![<sqlite>](https://img.shields.io/badge/sqlite-003B57?style=for-the-badge&logo=SQLite&logoColor=white)
+![<bootstrap>](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=Bootstrap&logoColor=white)
+
 
 ## Demo
 ### Login

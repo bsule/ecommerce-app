@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavbarComponent from "./components/NavbarComponent";
+import LoginCheck from './components/user/LoginCheck';
+import ItemDetailPage from './components/items/ItemsDetailPage';
 import Container from 'react-bootstrap/Container';
 import LoginPage from "./pages/LoginPage";
 import Home from './pages/Home';
 import CartPage from './pages/CartPage';
 import SignupPage from './pages/SignupPage';
-import LoginCheck from './components/user/LoginCheck';
-import ItemDetailPage from './components/items/ItemsDetailPage';
 import BuyNowPage from './pages/BuyNowPage';
 import NotFoundPage from './pages/NotFoundPage';
 

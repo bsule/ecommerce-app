@@ -1,8 +1,8 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { useViewCartQuery } from "../../redux/cartApis/cartApiSlice";
 import LoadingBarComponent from "../LoadingBar";
 import RemoveCart from "./RemoveCart";
-import { Link } from "react-router-dom";
 
 function ShowCart() {
     const {data, isLoading, error, refetch} = useViewCartQuery();

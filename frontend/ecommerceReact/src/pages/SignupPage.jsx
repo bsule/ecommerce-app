@@ -1,8 +1,8 @@
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import LoadingBarComponent from "../components/LoadingBar";
 import Signup from "../components/user/Signup";
-import { useSelector } from "react-redux";
-import { useEffect } from "react";
 
 function SignupPage() {
     const isLoading = false;

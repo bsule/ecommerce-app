@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { NavDropdown } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import { NavDropdown } from 'react-bootstrap';
 import { useLogoutMutation } from '../../redux/authApis/logoutApiSlice';
 import { logout as stateLogout } from '../../redux/slices/tokenSlice';
 
@@ -15,7 +15,8 @@ const NavigationMenu = () => {
             await logout().unwrap();
             dispatch(stateLogout());
             window.location.reload();
-        } catch (error) {}
+        }
+        catch (error) {}
     };
 
 

@@ -1,5 +1,5 @@
-import { useRemoveFromCartMutation } from "../../redux/cartApis/cartApiSlice";
 import { Button } from "react-bootstrap"; 
+import { useRemoveFromCartMutation } from "../../redux/cartApis/cartApiSlice";
 
 
 function RemoveCart({ item, refetchCart }) {

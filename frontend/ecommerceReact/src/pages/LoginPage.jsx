@@ -1,8 +1,8 @@
 import { useEffect } from "react";
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import LoadingBarComponent from "../components/LoadingBar";
 import Login from "../components/user/Login";
-import { useSelector } from "react-redux";
 
 function LoginPage() {
     const isLoading = false;

@@ -1,8 +1,8 @@
-import LoadingBarComponent from "../components/LoadingBar";
-import { useNavigate } from "react-router-dom";
-import ShowCart from "../components/cart/ShowCart";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { getAccessToken } from "../utils/tokenManager";
+import LoadingBarComponent from "../components/LoadingBar";
+import ShowCart from "../components/cart/ShowCart";
 import BuyNow from "../components/cart/BuyNow";
 
 function CartPage() {

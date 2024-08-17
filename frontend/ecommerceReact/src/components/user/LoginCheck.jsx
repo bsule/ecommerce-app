@@ -19,10 +19,8 @@ const LoginCheck = () => {
             try {
                 if (data && !error) {
                     const success = await refreshToken();
-
-                    if (success) {
-                    }
-                } else {
+                }
+                else {
                     const tryRefresh = await refreshToken();
     
                     if (!tryRefresh) {

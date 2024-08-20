@@ -8,6 +8,7 @@
 ![<sqlite>](https://img.shields.io/badge/sqlite-003B57?style=for-the-badge&logo=SQLite&logoColor=white)
 ![<bootstrap>](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=Bootstrap&logoColor=white)
 
+Full-stack Django Rest Framework and React Ecommerce application. Used REST APIs for the backend along with JWT Token Authentication to securely handle user data. Utilized React Router to do client-side routing, enhancing the applications smoothness and responsiveness. User data is stored in a SQLite database for quick and easy access.
 
 ## Demo
 ### Login

@@ -1,6 +1,7 @@
 import Logout from './user/Logout';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import SearchBar from './search/SearchBar';
 
 function NavbarComponent() {
     return (
@@ -9,9 +10,10 @@ function NavbarComponent() {
                 <Navbar.Brand as={NavLink} to="/">Shop</Navbar.Brand>
 
                 <Nav className="m-auto">
-                    <Nav.Link as={NavLink} to="/">Home</Nav.Link>
+                    {/* <Nav.Link as={NavLink} to="/">Home</Nav.Link>
 
-                    <Nav.Link as={NavLink} to="/cart">Cart</Nav.Link>
+                    <Nav.Link as={NavLink} to="/cart">Cart</Nav.Link> */}
+                    <SearchBar/>
                 </Nav>
                 <Nav>
                     <Logout/>

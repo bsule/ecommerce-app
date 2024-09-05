@@ -19,7 +19,7 @@ function SearchBar() {
     };
 
     return (
-        <div className="relative w-96">
+        <div className="relative w-[33rem]">
             <div className="flex items-center w-full border border-gray-300 rounded-full bg-gray-100 focus-within:ring-2 focus-within:ring-black">
                 <img src={SearchPic} alt="Search Icon" className="ml-3 w-5 h-5" />
                 <input

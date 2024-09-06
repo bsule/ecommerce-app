@@ -17,28 +17,22 @@ function NavbarComponent() {
                 <Navbar.Brand as={NavLink} to="/" className='pt-0'>Shop</Navbar.Brand>
 
                 <Nav className='justify-content-start flex-grow-1 ml-6'>
-                    <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                    <NavDropdown title="Categories" id="basic-nav-dropdown">
                         <NavDropdown.Item>Something</NavDropdown.Item>
                         <NavDropdown.Item>
                             Separated link
                         </NavDropdown.Item>
                     </NavDropdown>
 
-                    <NavDropdown title="Dropdown" className='mr-4 ml-4' id="basic-nav-dropdown">
-                        <NavDropdown.Item>Something</NavDropdown.Item>
-                        <NavDropdown.Item>
-                            Separated link
-                        </NavDropdown.Item>
-                    </NavDropdown>
-
+                    <Nav.Link className='mr-4 ml-4'>Savings</Nav.Link>
                     <Nav.Link className='mr-4'>New & Trending</Nav.Link>
-                    <Nav.Link className='mr-4'>New & Trending</Nav.Link>
+                    <Nav.Link className='mr-4'>Best Sellers</Nav.Link>
 
                     <SearchBar/>
                 </Nav>
                 <Nav>
                     <Logout/>
-                    <Nav.Link as={NavLink} to="/cart" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+                    <Nav.Link className='ml-2' as={NavLink} to="/cart" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
                         <img src={CartPic} alt="Cart" style={{ height: '24px', opacity: isOnCartPage || hover ? 1 : 0.75, transition: 'opacity 0.3s'}}/>
                     </Nav.Link>
                 </Nav>

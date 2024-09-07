@@ -5,6 +5,7 @@ import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import SearchBar from './search/SearchBar';
 import CartPic from '../images/icons8-cart-30.png';
+import logo from '../images/pngtree-black-and-white-magnetic-capital-letter-e-char-png-image_11306864.png';
 
 function NavbarComponent() {
     const [hover, setHover] = useState(false);
@@ -14,7 +15,7 @@ function NavbarComponent() {
     return (
         <Navbar bg="primary" data-bs-theme="dark">
             <Container>
-                <Navbar.Brand as={NavLink} to="/" className='pt-0'>Shop</Navbar.Brand>
+                <Navbar.Brand as={NavLink} to="/" className='pt-0'><img src={logo} alt="" className='w-10 mt-1'/></Navbar.Brand>
 
                 <Nav className='justify-content-start flex-grow-1 ml-6'>
                     <NavDropdown title="Categories" id="basic-nav-dropdown">

@@ -19,10 +19,8 @@ function NavbarComponent() {
 
                 <Nav className='justify-content-start flex-grow-1 ml-6'>
                     <NavDropdown title="Categories" id="basic-nav-dropdown">
-                        <NavDropdown.Item>Something</NavDropdown.Item>
-                        <NavDropdown.Item>
-                            Separated link
-                        </NavDropdown.Item>
+                        <NavDropdown.Item>Phones</NavDropdown.Item>
+                        <NavDropdown.Item>Laptops</NavDropdown.Item>
                     </NavDropdown>
 
                     <Nav.Link className='mr-4 ml-4'>Savings</Nav.Link>

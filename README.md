@@ -13,10 +13,13 @@ Full-stack Django Rest Framework and React Ecommerce application. Used REST APIs
 
 ## Demo
 ### Login
-<img src="https://github.com/user-attachments/assets/08f03d68-1f86-4d6b-989b-0288c8d046f4" alt="login" height="300"/>
+<img src="=https://github.com/user-attachments/assets/c1abd54c-2a5f-430b-9045-c373588ade1c" alt="login" height="300"/>
+
+### Searching
+<img src="https://github.com/user-attachments/assets/639e72f8-f272-41ca-af7e-20cd5de8ea87" alt="searching" height="300"/>
 
 ### Adding to Cart
-<img src="https://github.com/user-attachments/assets/32143d20-dcb2-45a5-be84-39a49480fe09" alt="adding_to_cart" height="300"/>
+<img src="https://github.com/user-attachments/assets/037ad844-b064-4e95-9868-bac1f021e99e" alt="adding_to_cart" height="300"/>
 
 ### Logout
-<img src="https://github.com/user-attachments/assets/7e2fb2a9-e8af-47e2-abef-5d47034874a7" alt="logout" height="300"/>
+<img src="https://github.com/user-attachments/assets/1e80ed97-ee03-4926-8d0e-fe94131c57dd" alt="logout" height="300"/>

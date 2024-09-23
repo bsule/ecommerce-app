@@ -23,7 +23,7 @@ function NavbarComponent() {
                         <NavDropdown.Item>Laptops</NavDropdown.Item>
                     </NavDropdown>
 
-                    <Nav.Link className='mr-4 ml-4'>Savings</Nav.Link>
+                    <Nav.Link className='mr-4 ml-4' as={NavLink} to="/savings">Savings</Nav.Link>
                     <Nav.Link className='mr-4'>New & Trending</Nav.Link>
                     <Nav.Link className='mr-4'>Best Sellers</Nav.Link>
 

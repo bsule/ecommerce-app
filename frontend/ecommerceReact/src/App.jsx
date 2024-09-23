@@ -9,6 +9,7 @@ import CartPage from './pages/CartPage';
 import SignupPage from './pages/SignupPage';
 import BuyNowPage from './pages/BuyNowPage';
 import NotFoundPage from './pages/NotFoundPage';
+import Savings from './pages/Savings';
 
 function App() {
     return (
@@ -25,6 +26,7 @@ function App() {
                         <Route path='/cart' element={<CartPage/>}/>
                         <Route path='/buy-now' element={<BuyNowPage/>}/>
                         <Route path='*' element={<NotFoundPage/>}/>
+                        <Route path='/savings' element={<Savings/>}/>
                     </Routes>
                 </Container>
             </div>

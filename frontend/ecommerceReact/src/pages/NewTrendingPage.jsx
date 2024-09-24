@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import StarRating from "../components/items/StarRating";
 import AddCart from "../components/cart/AddCart";
 
-function Savings(){
+function NewTrendingPage(){
     const {data, isLoading, error} = useGetItemsQuery();
 
     if (isLoading) {
@@ -15,9 +15,10 @@ function Savings(){
         );
     }
 
-    const savingsIds = [2, 4, 5, 13, 14, 16, 7]
+    const savingsIds = [4, 5, 8, 10, 14, 15, 16, 17]
     
     const filteredItems = data?.filter(item => savingsIds.includes(item.id));
+    console.log(data);
 
     return (
         <div className="flex flex-row flex-wrap justify-content-center">
@@ -47,4 +48,4 @@ function Savings(){
     );
 }
 
-export default Savings;
+export default NewTrendingPage;

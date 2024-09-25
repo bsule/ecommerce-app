@@ -24,8 +24,8 @@ function NavbarComponent() {
                     </NavDropdown>
 
                     <Nav.Link className='mr-4 ml-4' as={NavLink} to="/savings">Savings</Nav.Link>
-                    <Nav.Link className='mr-4' as={NavLink} to='/newtrending'>New & Trending</Nav.Link>
-                    <Nav.Link className='mr-4'>Best Sellers</Nav.Link>
+                    <Nav.Link className='mr-4' as={NavLink} to='/new-trending'>New & Trending</Nav.Link>
+                    <Nav.Link className='mr-4' as={NavLink} to='/best-sellers'>Best Sellers</Nav.Link>
 
                     <SearchBar/>
                 </Nav>

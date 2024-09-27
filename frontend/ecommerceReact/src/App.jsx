@@ -12,6 +12,7 @@ import NotFoundPage from './pages/NotFoundPage';
 import Savings from './pages/Savings';
 import NewTrendingPage from './pages/NewTrendingPage';
 import BestSellerPage from './pages/BestSellerPage';
+import PhonesPage from './pages/PhonesPage';
 
 function App() {
     return (
@@ -31,6 +32,7 @@ function App() {
                         <Route path='/savings' element={<Savings/>}/>
                         <Route path='/new-trending' element={<NewTrendingPage/>}/>
                         <Route path='/best-sellers' element={<BestSellerPage/>}/>
+                        <Route path='/phones' element={<PhonesPage/>}/>
                     </Routes>
                 </Container>
             </div>

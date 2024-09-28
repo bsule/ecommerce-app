@@ -40,7 +40,7 @@ function PhonesPage(){
                     </div>
                 ))
             ) : (
-                <p>No items found</p>
+                <p>No items to display</p>
             )
             }
         </div>

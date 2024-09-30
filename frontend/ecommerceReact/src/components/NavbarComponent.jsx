@@ -20,7 +20,7 @@ function NavbarComponent() {
                 <Nav className='justify-content-start flex-grow-1 ml-6'>
                     <NavDropdown title="Categories" id="basic-nav-dropdown">
                         <NavDropdown.Item as={NavLink} to='/phones'>Phones</NavDropdown.Item>
-                        <NavDropdown.Item>Laptops</NavDropdown.Item>
+                        <NavDropdown.Item as={NavLink} to='/laptops'>Laptops</NavDropdown.Item>
                     </NavDropdown>
 
                     <Nav.Link className='mr-4 ml-4' as={NavLink} to="/savings">Savings</Nav.Link>

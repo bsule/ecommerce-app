@@ -40,7 +40,7 @@ function LaptopsPage(){
                     </div>
                 ))
             ) : (
-                <p>No items to display</p>
+                <p>No items to show</p>
             )
             }
         </div>

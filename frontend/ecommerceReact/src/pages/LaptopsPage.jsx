@@ -15,7 +15,7 @@ function LaptopsPage(){
         );
     }
 
-    const savingsIds = [4, 6, 7, 9]
+    const savingsIds = [8, 10, 13]
     
     const filteredItems = data?.filter(item => savingsIds.includes(item.id));
 

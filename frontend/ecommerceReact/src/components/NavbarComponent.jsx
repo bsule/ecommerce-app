@@ -18,7 +18,7 @@ function NavbarComponent() {
                 <Navbar.Brand as={NavLink} to="/" className='pt-0'><img src={logo} alt="" className='w-10 mt-1'/></Navbar.Brand>
 
                 <Nav className='justify-content-start flex-grow-1 ml-6'>
-                    <NavDropdown title="Categories" id="basic-nav-dropdown">
+                    <NavDropdown title="Devices" id="basic-nav-dropdown">
                         <NavDropdown.Item as={NavLink} to='/phones'>Phones</NavDropdown.Item>
                         <NavDropdown.Item as={NavLink} to='/laptops'>Laptops</NavDropdown.Item>
                     </NavDropdown>
